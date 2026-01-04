@@ -2,6 +2,12 @@ import requests
 import re
 
 #通过python在b站爬取音频和视频
+"""
+通过请求头，以及Cookie，referer等完善headers，就可以用代码访问复杂的网页，从而爬取视频
+"""
+"""
+在爬取b站视频的时候出现了许多问题，其中最多的便是请求头的问题，在我获取Cookie的时候，因为Cookie中自带的单引号出现了范围问题，在之后研究发现在Cookie的两边加双引号就可以解决，在之后研究了网络里的东西，修改了一部分，最后便成功运行了
+"""
 
 url='https://www.bilibili.com/video/BV1nmsWexEfA/?spm_id_from=333.1387.favlist.content.click&vd_source=e31124669c1c708631bdcc9e7a3c2a02'
 headers ={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0',
