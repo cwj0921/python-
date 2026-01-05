@@ -9,10 +9,10 @@ import re
 在爬取b站视频的时候出现了许多问题，其中最多的便是请求头的问题，在我获取Cookie的时候，因为Cookie中自带的单引号出现了范围问题，在之后研究发现在Cookie的两边加双引号就可以解决，在之后研究了网络里的东西，修改了一部分，最后便成功运行了
 """
 
-url='https://www.bilibili.com/video/BV1nmsWexEfA/?spm_id_from=333.1387.favlist.content.click&vd_source=e31124669c1c708631bdcc9e7a3c2a02'
+url=（自己的url）'
 headers ={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0',
           'Cookie':"(在网页中找自己的Cookie)",
-          'Referer':'https://www.bilibili.com/'
+          'Referer':'（网址）'
           }                                                     #获取b站的url和Cookie
 L = requests.get(url=url,headers=headers).text          #将获取的请求打印(方便到时候利用正则寻找视频和音频的url)
 print(L)
